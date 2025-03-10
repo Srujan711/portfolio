@@ -1,0 +1,28 @@
+{
+    "name": "portfolio",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "next lint"
+    },
+    "dependencies": {
+      "axios": "^0.21.1",
+      "bootstrap": "^5.1.0",
+      "next": "latest",
+      "react": "latest",
+      "react-dom": "latest",
+      "react-easy-emoji": "^1.1.1",
+      "react-headroom": "^3.1.0",
+      "react-lottie": "^1.2.3",
+      "react-reveal": "^1.2.2"
+    },
+    "devDependencies": {
+      "@types/node": "^16.11.1",
+      "@types/react": "^17.0.30",
+      "@types/react-dom": "^17.0.9",
+      "typescript": "^4.4.4"
+    }
+  }
