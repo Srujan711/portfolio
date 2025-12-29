@@ -110,6 +110,11 @@ const Portfolio = () => {
           width: 8px;
         }
 
+        html, body {
+          max-width: 100%;
+          overflow-x: hidden;
+      }
+
         ::-webkit-scrollbar-track {
           background: #1a1a2e;
         }
@@ -204,7 +209,8 @@ const Portfolio = () => {
         right: 0,
         bottom: 0,
         pointerEvents: 'none',
-        opacity: 0.05
+        opacity: 0.05,
+        overflow: 'hidden'
       }}>
         {[...Array(5)].map((_, i) => (
           <div key={i} style={{
@@ -303,7 +309,7 @@ const Portfolio = () => {
             opacity: 0.9,
             lineHeight: 1.6
           }}>
-            MS Computer Science from Virginia Tech. Currently on STEM OPT.
+            MS Computer Science from Virginia Tech.
             <span className="metric-highlight"> Java/Spring Boot</span>, <span className="metric-highlight">Python</span>, <span className="metric-highlight">TypeScript/React</span>.
             Shipping code that scales.
           </p>
@@ -683,7 +689,7 @@ const Portfolio = () => {
               MS Computer Science • 2023-2024
             </p>
             <p style={{ fontSize: '0.9rem', opacity: 0.7, marginTop: '0.5rem' }}>
-              STEM OPT Status • GPA: 3.7+
+             GPA: 3.81
             </p>
           </div>
 
