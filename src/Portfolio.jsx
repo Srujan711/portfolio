@@ -1,16 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ChevronRight, Github, Linkedin, Mail, ExternalLink, Calendar, Award } from 'lucide-react';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('about');
   const [hoveredProject, setHoveredProject] = useState(null);
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const skills = {
     "Backend": ["Java", "Spring Boot", "Python", "FastAPI", "Node.js", "RESTful APIs"],
@@ -199,6 +192,24 @@ const Portfolio = () => {
             transform: translateX(-50%) translateY(-10px);
           }
         }
+
+        @media (max-width: 768px) {
+          .experience-item {
+            justify-content: center !important;
+          }
+
+          .experience-card {
+            width: 100% !important;
+          }
+
+          .timeline-line {
+            display: none !important;
+          }
+
+          .timeline-dot {
+            display: none !important;
+          }
+        }
       `}</style>
 
       {/* Animated background elements */}
@@ -238,7 +249,6 @@ const Portfolio = () => {
         padding: '1rem 2rem',
         zIndex: 1000,
         borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-        transform: `translateY(${scrollY > 100 ? '-100%' : '0'})`,
         transition: 'transform 0.3s ease'
       }}>
         <div style={{
@@ -255,7 +265,11 @@ const Portfolio = () => {
             {['About', 'Skills', 'Projects', 'Experience'].map(item => (
               <button
                 key={item}
-                onClick={() => setActiveSection(item.toLowerCase())}
+                onClick={() => {
+                  const id = item.toLowerCase()
+                  setActiveSection(id)
+                  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
+                }}
                 style={{
                   background: 'none',
                   border: 'none',
@@ -570,7 +584,7 @@ const Portfolio = () => {
 
         <div style={{ position: 'relative' }}>
           {/* Timeline line */}
-          <div style={{
+          <div className="timeline-line" style={{
             position: 'absolute',
             left: '50%',
             top: 0,
@@ -581,13 +595,13 @@ const Portfolio = () => {
           }}/>
 
           {experience.map((exp, index) => (
-            <div key={index} style={{
+            <div key={index} className="experience-item" style={{
               display: 'flex',
               justifyContent: index % 2 === 0 ? 'flex-end' : 'flex-start',
               marginBottom: '3rem',
               position: 'relative'
             }}>
-              <div className="hover-lift" style={{
+              <div className="hover-lift experience-card" style={{
                 width: '45%',
                 background: 'rgba(255, 255, 255, 0.05)',
                 padding: '2rem',
@@ -637,7 +651,7 @@ const Portfolio = () => {
               </div>
 
               {/* Timeline dot */}
-              <div style={{
+              <div className="timeline-dot" style={{
                 position: 'absolute',
                 left: '50%',
                 top: '2rem',
