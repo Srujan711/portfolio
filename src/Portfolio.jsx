@@ -27,7 +27,6 @@ const Portfolio = () => {
       tech: ["Java", "TypeScript", "React", "WebRTC", "MongoDB"],
       metrics: "500+ concurrent users, Real-time masking",
       github: "https://github.com/Srujan711/",
-      live: "#"
     },
     {
       id: 2,
@@ -36,7 +35,6 @@ const Portfolio = () => {
       tech: ["React", "Java", "Spring Boot", "OpenAI", "NLP"],
       metrics: "Automated feedback loops",
       github: "https://github.com/Srujan711",
-      live: "#"
     },
     {
       id: 3,
@@ -45,7 +43,6 @@ const Portfolio = () => {
       tech: ["TypeScript", "React", "Python", "Google ADK"],
       metrics: "Critical state management fix",
       github: "https://github.com/Srujan711/AI-Scrum-Master-Backend",
-      live: "#"
     },
     {
       id: 4,
@@ -54,7 +51,6 @@ const Portfolio = () => {
       tech: ["Vue.js", "Java", "Spring Boot", "Elasticsearch"],
       metrics: "Sub-second search, 35% inventory optimization",
       github: "https://github.com/Srujan711/Voldemort-Bookstore",
-      live: "#"
     }
   ];
 
@@ -291,7 +287,7 @@ const Portfolio = () => {
               marginTop: '0.5rem',
               opacity: 0.8
             }}>
-              Full Stack Engineer • Open Source Contributor
+              Full Stack Engineer • Open Source Contributor • Entrepreneurial mindset
             </span>
           </h1>
           
@@ -321,7 +317,7 @@ const Portfolio = () => {
             }}>
               Download Resume
             </button>
-            <button className="hover-lift" style={{
+            <button className="hover-lift" onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })} style={{
               background: 'transparent',
               color: '#00ff88',
               border: '2px solid #00ff88',
@@ -388,8 +384,8 @@ const Portfolio = () => {
 
           <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center' }}>
             {[
-              { icon: <Github size={20}/>, link: 'https://github.com/srujanvithalani', label: 'GitHub' },
-              { icon: <Linkedin size={20}/>, link: 'https://linkedin.com/in/srujanvithalani', label: 'LinkedIn' },
+              { icon: <Github size={20}/>, link: 'https://github.com/Srujan711', label: 'GitHub' },
+              { icon: <Linkedin size={20}/>, link: 'https://www.linkedin.com/in/srujan-vithalani/', label: 'LinkedIn' },
               { icon: <Mail size={20}/>, link: 'mailto:srujanvithlani@gmail.com', label: 'Email' }
             ].map((social, i) => (
               <a key={i} href={social.link} className="hover-lift" style={{
@@ -419,7 +415,7 @@ const Portfolio = () => {
       </section>
 
       {/* Skills Section */}
-      <section style={{
+      <section id = "skills" style={{
         padding: '5rem 2rem',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -466,7 +462,7 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Section */}
-      <section style={{
+      <section id = "projects" style={{
         padding: '5rem 2rem',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -540,16 +536,6 @@ const Portfolio = () => {
                 }}>
                   <Github size={16}/> Code
                 </a>
-                <a href={project.live} style={{
-                  color: '#00ffff',
-                  textDecoration: 'none',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.5rem',
-                  fontSize: '0.9rem'
-                }}>
-                  <ExternalLink size={16}/> Live Demo
-                </a>
               </div>
             </div>
           ))}
@@ -557,7 +543,7 @@ const Portfolio = () => {
       </section>
 
       {/* Experience Section */}
-      <section style={{
+      <section id = "experience" style={{
         padding: '5rem 2rem',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -764,7 +750,7 @@ const Portfolio = () => {
           fontSize: '0.8rem',
           opacity: 0.5
         }}>
-          © 2024 Srujan Vithalani. Built with React & high performance standards.
+          © 2025 Srujan Vithalani. Built with React & high performance standards.
         </p>
       </footer>
     </div>
