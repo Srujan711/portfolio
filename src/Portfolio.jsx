@@ -118,6 +118,10 @@ const Portfolio = () => {
           background: #4a4a6e;
           border-radius: 4px;
         }
+        section {
+          scroll-margin-top: 80px;
+        }
+
 
         ::-webkit-scrollbar-thumb:hover {
           background: #5a5a7e;
@@ -264,12 +268,13 @@ const Portfolio = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="slide-in" style={{
+      <section id="about" className="slide-in" style={{
         minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         padding: '2rem',
+        paddingTop: "calc(2rem + 72px)",
         position: 'relative'
       }}>
         <div style={{ maxWidth: '1200px', textAlign: 'center' }}>
