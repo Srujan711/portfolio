@@ -26,7 +26,7 @@ const Portfolio = () => {
       description: "WebRTC video conferencing with gender-neutral voice modulation and facial authentication for bias-free interviews",
       tech: ["Java", "TypeScript", "React", "WebRTC", "MongoDB"],
       metrics: "500+ concurrent users, Real-time masking",
-      github: "https://github.com/srujanvithalani",
+      github: "https://github.com/Srujan711/",
       live: "#"
     },
     {
@@ -35,16 +35,16 @@ const Portfolio = () => {
       description: "Interview prep tool using OpenAI API for real-time response analysis and personalized feedback generation",
       tech: ["React", "Java", "Spring Boot", "OpenAI", "NLP"],
       metrics: "Automated feedback loops",
-      github: "https://github.com/srujanvithalani",
+      github: "https://github.com/Srujan711",
       live: "#"
     },
     {
       id: 3,
-      title: "CopilotKit Bug Discovery",
-      description: "Found production bug in Google ADK integration - NoneType error in message handling after task completion",
+      title: "ScrumAI",
+      description: "An AI-powered Scrum Master assistant automating task management and sprint planning using NLP techniquesß",
       tech: ["TypeScript", "React", "Python", "Google ADK"],
       metrics: "Critical state management fix",
-      github: "https://github.com/CopilotKit/CopilotKit/issues",
+      github: "https://github.com/Srujan711/AI-Scrum-Master-Backend",
       live: "#"
     },
     {
@@ -53,7 +53,7 @@ const Portfolio = () => {
       description: "E-commerce platform with Elasticsearch integration for natural language search across 10K+ book inventory",
       tech: ["Vue.js", "Java", "Spring Boot", "Elasticsearch"],
       metrics: "Sub-second search, 35% inventory optimization",
-      github: "https://github.com/srujanvithalani",
+      github: "https://github.com/Srujan711/Voldemort-Bookstore",
       live: "#"
     }
   ];
