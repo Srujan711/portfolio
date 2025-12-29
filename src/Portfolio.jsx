@@ -194,6 +194,19 @@ const Portfolio = () => {
         }
 
         @media (max-width: 768px) {
+          nav > div {
+            padding: 0 !important;
+          }
+
+          nav > div > div:last-child {
+            gap: 0.5rem !important;
+          }
+
+          nav button {
+            font-size: 0.85rem !important;
+            padding: 0.25rem 0.5rem !important;
+          }
+
           .experience-item {
             justify-content: center !important;
           }
@@ -208,6 +221,22 @@ const Portfolio = () => {
 
           .timeline-dot {
             display: none !important;
+          }
+
+          .projects-grid {
+            grid-template-columns: 1fr !important;
+          }
+
+          .skills-grid {
+            grid-template-columns: 1fr !important;
+          }
+
+          .stats-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+
+          .education-grid {
+            grid-template-columns: 1fr !important;
           }
         }
       `}</style>
@@ -358,7 +387,7 @@ const Portfolio = () => {
           </div>
 
           {/* Quick Stats */}
-          <div style={{
+          <div className="stats-grid" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
             gap: '1rem',
@@ -453,8 +482,8 @@ const Portfolio = () => {
         }}>
           Tech Stack
         </h2>
-        
-        <div style={{
+
+        <div className="skills-grid" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
           gap: '2rem'
@@ -501,7 +530,7 @@ const Portfolio = () => {
           Featured Projects
         </h2>
 
-        <div style={{
+        <div className="projects-grid" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
           gap: '2rem'
@@ -684,7 +713,7 @@ const Portfolio = () => {
           Education & Achievements
         </h2>
 
-        <div style={{
+        <div className="education-grid" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
           gap: '2rem'
