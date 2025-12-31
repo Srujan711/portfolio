@@ -15,34 +15,34 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "InclusiveHire - Accessible Video Platform",
-      description: "WebRTC video conferencing with gender-neutral voice modulation and facial authentication for bias-free interviews",
-      tech: ["Java", "TypeScript", "React", "WebRTC", "MongoDB"],
-      metrics: "500+ concurrent users, Real-time masking",
-      github: "https://github.com/Srujan711/",
-    },
-    {
-      id: 2,
-      title: "Annotate, Reflect & Repeat",
-      description: "Interview prep tool using OpenAI API for real-time response analysis and personalized feedback generation",
-      tech: ["React", "Java", "Spring Boot", "OpenAI", "NLP"],
-      metrics: "Automated feedback loops",
-      github: "https://github.com/Srujan711",
-    },
-    {
-      id: 3,
-      title: "ScrumAI",
-      description: "An AI-powered Scrum Master assistant automating task management and sprint planning using NLP techniquesß",
-      tech: ["TypeScript", "React", "Python", "Google ADK"],
-      metrics: "Critical state management fix",
+      title: "AI Scrum Master",
+      description: "Automates sprint planning and daily standups by integrating Jira, GitHub, and Slack APIs. Uses vector database (Pinecone/FAISS) for semantic search across backlog items to surface duplicates and suggest story points based on historical velocity.",
+      tech: ["Python", "FastAPI", "React", "TypeScript", "OpenAI API", "PostgreSQL", "Redis"],
+      metrics: "LangChain orchestration, RAG pipeline, real-time Slack summaries",
       github: "https://github.com/Srujan711/AI-Scrum-Master-Backend",
     },
     {
+      id: 2,
+      title: "InclusiveHire",
+      description: "Video conferencing platform for bias-free technical interviews. Built real-time voice modulation and video masking to anonymize candidates. Includes periodic facial authentication to verify identity without revealing gender.",
+      tech: ["Java", "TypeScript", "React", "WebRTC", "MongoDB"],
+      metrics: "500+ concurrent sessions, sub-200ms voice processing latency",
+      github: "https://github.com/Srujan711/",
+    },
+    {
+      id: 3,
+      title: "Annotate, Reflect & Repeat",
+      description: "Interview prep platform that records responses and scores them against STAR/PAR/CAR frameworks using OpenAI. Generates specific feedback on structure, content gaps, and delivery rather than generic suggestions.",
+      tech: ["React", "Node.js", "OpenAI API", "PostgreSQL"],
+      metrics: "Real-time transcript analysis, framework-specific scoring",
+      github: "https://github.com/Srujan711",
+    },
+    {
       id: 4,
-      title: "Voldemort BookStore",
-      description: "E-commerce platform with Elasticsearch integration for natural language search across 10K+ book inventory",
-      tech: ["Vue.js", "Java", "Spring Boot", "Elasticsearch"],
-      metrics: "Sub-second search, 35% inventory optimization",
+      title: "Voldemort Bookstore",
+      description: "E-commerce platform with session persistence so users resume shopping where they left off. Elasticsearch handles natural language search across 10K+ book inventory. Stores payment data securely with tokenization.",
+      tech: ["Vue.js", "Java", "Spring Boot", "Elasticsearch", "Tomcat"],
+      metrics: "Sub-second search, session recovery across devices",
       github: "https://github.com/Srujan711/Voldemort-Bookstore",
     }
   ];
@@ -288,7 +288,7 @@ const Portfolio = () => {
           alignItems: 'center'
         }}>
           <div style={{ fontSize: '1.5rem', fontWeight: 800 }}>
-            <span className="glow">SR</span>
+            <span className="glow">SV</span>
           </div>
           <div style={{ display: 'flex', gap: '2rem' }}>
             {['About', 'Skills', 'Projects', 'Experience'].map(item => (
@@ -341,7 +341,7 @@ const Portfolio = () => {
               marginTop: '0.5rem',
               opacity: 0.8
             }}>
-              Full Stack Engineer • Open Source Contributor • Entrepreneurial mindset
+              Full Stack Engineer • Open Source Contributor • Soccer Player 
             </span>
           </h1>
           
@@ -352,7 +352,7 @@ const Portfolio = () => {
             opacity: 0.9,
             lineHeight: 1.6
           }}>
-            MS Computer Science from Virginia Tech.
+            Virginia Tech, Batch of '24 • Delhi Technological University, Batch of '22 <br/>
             <span className="metric-highlight"> Java/Spring Boot</span>, <span className="metric-highlight">Python</span>, <span className="metric-highlight">TypeScript/React</span>.
             Shipping code that scales.
           </p>
